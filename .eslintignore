@@ -1,0 +1,17 @@
+.DS_Store
+.vscode/
+.idea/
+node_modules/
+*.local
+dist/
+dist-ssr/
+.pnpm-debug.log*
+.pnp/
+coverage/
+.vercel/
+.next/
+out/
+build/
+/packages/eslint-config-*/**/*.d.ts
+
+/fail/*

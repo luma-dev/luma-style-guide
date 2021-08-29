@@ -1,0 +1,35 @@
+{
+  "name": "@luma-dev/eslint-config-base",
+  "version": "0.1.0",
+  "keywords": [
+    "luma"
+  ],
+  "homepage": "https://github.com/luma-dev/luma-style-guide#readme",
+  "bugs": {
+    "url": "https://github.com/luma-dev/luma-style-guide/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luma-dev/luma-style-guide.git",
+    "directory": "packages/eslint-config-base"
+  },
+  "license": "MIT",
+  "author": "Luma <world@luma.email>",
+  "scripts": {
+    "build": "rimraf \"*.d.ts\" && tsc"
+  },
+  "dependencies": {
+    "@types/eslint": "^7.28.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.4.2"
+  },
+  "peerDependencies": {
+    "eslint": "*",
+    "eslint-config-airbnb-base": "*",
+    "eslint-config-prettier": "*",
+    "eslint-plugin-eslint-comments": "*",
+    "eslint-plugin-json-format": "*",
+    "eslint-plugin-prettier": "*"
+  }
+}

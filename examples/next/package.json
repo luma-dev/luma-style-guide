@@ -1,0 +1,33 @@
+{
+  "name": "example-next",
+  "private": true,
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "test": "run-s test:*",
+    "test:tsc": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@babel/core": "7.15.0",
+    "next": "11.1.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@luma-dev/eslint-config-base": "workspace:*",
+    "@luma-dev/eslint-config-next": "workspace:*",
+    "@luma-dev/tsconfig-next": "workspace:*",
+    "@next/eslint-plugin-next": "11.1.0",
+    "@types/node": "12.12.21",
+    "@types/react": "17.0.2",
+    "@types/react-dom": "17.0.1",
+    "eslint-config-next": "11.1.0",
+    "typescript": "4.3.5"
+  },
+  "engines": {
+    "npm": "forbidden, use npm",
+    "pnpm": ">=6",
+    "yarn": "forbidden, use npm"
+  }
+}

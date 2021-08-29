@@ -1,0 +1,2 @@
+no-console
+@typescript-eslint/no-floating-promises

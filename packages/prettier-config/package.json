@@ -1,0 +1,19 @@
+{
+  "name": "@luma-dev/prettier-config",
+  "version": "0.1.0",
+  "keywords": [
+    "luma"
+  ],
+  "homepage": "https://github.com/luma-dev/luma-style-guide#readme",
+  "bugs": {
+    "url": "https://github.com/luma-dev/luma-style-guide/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luma-dev/luma-style-guide.git",
+    "directory": "packages/prettier-config"
+  },
+  "license": "MIT",
+  "author": "Luma <world@luma.email>",
+  "main": "index.json"
+}

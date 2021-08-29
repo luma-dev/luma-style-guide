@@ -1,0 +1,29 @@
+{
+  "name": "@luma-dev/eslint-config-react",
+  "version": "0.1.0",
+  "keywords": [
+    "luma"
+  ],
+  "homepage": "https://github.com/luma-dev/luma-style-guide#readme",
+  "bugs": {
+    "url": "https://github.com/luma-dev/luma-style-guide/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luma-dev/luma-style-guide.git",
+    "directory": "packages/eslint-config-react"
+  },
+  "license": "MIT",
+  "author": "Luma <world@luma.email>",
+  "scripts": {
+    "build": "rimraf \"*.d.ts\" && tsc"
+  },
+  "devDependencies": {
+    "@types/eslint": "^7.28.0"
+  },
+  "peerDependencies": {
+    "@luma-dev/eslint-config-base": "*",
+    "eslint": "*",
+    "eslint-config-airbnb": "*"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "extends": "@luma-dev/tsconfig-react/tsconfig.json",
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "./src",
+    "*.ts"
+  ]
+}
