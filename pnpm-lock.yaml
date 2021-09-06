@@ -20,6 +20,7 @@ importers:
       eslint-config-prettier: 8.3.0
       eslint-plugin-eslint-comments: 3.2.0
       eslint-plugin-import: 2.24.2
+      eslint-plugin-jest: 24.4.0
       eslint-plugin-json-format: 2.0.1
       eslint-plugin-prettier: 3.4.0
       husky: 7.0.1
@@ -46,6 +47,7 @@ importers:
       eslint-config-prettier: 8.3.0_eslint@7.32.0
       eslint-plugin-eslint-comments: 3.2.0_eslint@7.32.0
       eslint-plugin-import: 2.24.2_eslint@7.32.0
+      eslint-plugin-jest: 24.4.0_2ad72e29dce3c7f9f5b63c34ce24dd0c
       eslint-plugin-json-format: 2.0.1_eslint@7.32.0
       eslint-plugin-prettier: 3.4.0_5a48a349ffec60f5257b5f148f5199c3
       husky: 7.0.1

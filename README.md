@@ -6,6 +6,68 @@ Luma coding style guide, specifically for frontend, JavaScript and TypeScript pr
 
 NOTICE: Are you about to contirubte the projects with this style? If we're in owners of that project, please make PR at first and I will refer to the rules violated in your PR, so it's unnecessary to read this.
 
+## Packages
+
+[`@luma-dev/eslint-config-base`](https://www.npmjs.com/package/@luma-dev/eslint-config-base)
+
+```
+pnpm add @luma-dev/eslint-config-base eslint, eslint-config-airbnb-base, eslint-config-prettier, eslint-plugin-eslint-comments, eslint-plugin-json-format, eslint-plugin-prettier -D
+```
+
+[`@luma-dev/eslint-config-jest`](https://www.npmjs.com/package/@luma-dev/eslint-config-jest)
+
+```
+pnpm add @luma-dev/eslint-config-jest @luma-dev/eslint-config-base, eslint, eslint-plugin-jest -D
+```
+
+[`@luma-dev/eslint-config-next`](https://www.npmjs.com/package/@luma-dev/eslint-config-next)
+
+```
+pnpm add @luma-dev/eslint-config-next @luma-dev/eslint-config-base, eslint, eslint-config-next, eslint-plugin-next -D
+```
+
+[`@luma-dev/eslint-config-react`](https://www.npmjs.com/package/@luma-dev/eslint-config-react)
+
+```
+pnpm add @luma-dev/eslint-config-react @luma-dev/eslint-config-base, eslint, eslint-config-airbnb -D
+```
+
+[`@luma-dev/eslint-config-svelte`](https://www.npmjs.com/package/@luma-dev/eslint-config-svelte)
+
+```
+pnpm add @luma-dev/eslint-config-svelte @luma-dev/eslint-config-base, eslint, eslint-plugin-svelte3 -D
+```
+
+[`@luma-dev/prettier-config`](https://www.npmjs.com/package/@luma-dev/prettier-config)
+
+```
+pnpm add @luma-dev/prettier-config -D
+```
+
+[`@luma-dev/tsconfig-base`](https://www.npmjs.com/package/@luma-dev/tsconfig-base)
+
+```
+pnpm add @luma-dev/tsconfig-base -D
+```
+
+[`@luma-dev/tsconfig-next`](https://www.npmjs.com/package/@luma-dev/tsconfig-next)
+
+```
+pnpm add @luma-dev/tsconfig-next -D
+```
+
+[`@luma-dev/tsconfig-react`](https://www.npmjs.com/package/@luma-dev/tsconfig-react)
+
+```
+pnpm add @luma-dev/tsconfig-react -D
+```
+
+[`@luma-dev/tsconfig-svelte`](https://www.npmjs.com/package/@luma-dev/tsconfig-svelte)
+
+```
+pnpm add @luma-dev/tsconfig-svelte -D
+```
+
 ## Definition
 
 ### NPM Package Type
