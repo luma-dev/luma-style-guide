@@ -1,6 +1,6 @@
 # Luma Style Guide
 
-[[Luma Style Guide](https://img.shields.io/badge/styled%20with-luma-%23c5ebeb?style=flat-square)](https://github.com/luma-dev/luma-style-guide#readme)
+[![Luma Style Guide](https://img.shields.io/badge/styled%20with-luma-%23c5ebeb?style=flat-square)](https://github.com/luma-dev/luma-style-guide#readme)
 
 Luma coding style guide, specifically for frontend, JavaScript and TypeScript projects.
 
@@ -162,4 +162,10 @@ module.exports = {
     'monaco-editor',
   ],
 }],
+```
+
+### Badge
+
+```md
+[![Luma Style Guide](https://img.shields.io/badge/styled%20with-luma-%23c5ebeb?style=flat-square)](https://github.com/luma-dev/luma-style-guide#readme)
 ```
