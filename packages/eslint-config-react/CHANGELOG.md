@@ -1,5 +1,12 @@
 # @luma-dev/eslint-config-react
 
+## 0.2.1
+
+### Patch Changes
+
+- Updated dependencies [fd11690]
+  - @luma-dev/eslint-config-base@0.3.0
+
 ## 0.2.0
 
 ### Minor Changes
