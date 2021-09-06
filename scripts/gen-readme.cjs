@@ -34,7 +34,7 @@ const pkgDesc = pkgs.flatMap((pkg) => {
   if (manifest.private) return [];
   const { name } = manifest;
   const peerDeps = listPeerDeps(manifest);
-  const peers = peerDeps.map((e) => ` ${e}`).join();
+  const peers = peerDeps.map((e) => ` ${e}`).join('');
 
   const head = `[\`${name}\`](https://www.npmjs.com/package/${name})`;
   return [head, '', '```', `pnpm add ${name}${peers} -D`, '```', ''];

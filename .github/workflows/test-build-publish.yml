@@ -63,6 +63,7 @@ jobs:
           run_install: |
             - recursive: true
               args: [--frozen-lockfile, --prefer-offline]
+      - run: ./scripts/gen-readme.cjs
       - name: Build
         run: pnpm build
       - name: Lint
