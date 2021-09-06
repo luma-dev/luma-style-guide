@@ -11,31 +11,31 @@ NOTICE: Are you about to contirubte the projects with this style? If we're in ow
 [`@luma-dev/eslint-config-base`](https://www.npmjs.com/package/@luma-dev/eslint-config-base)
 
 ```
-pnpm add @luma-dev/eslint-config-base eslint eslint-config-airbnb-base eslint-config-prettier eslint-plugin-eslint-comments eslint-plugin-json-format eslint-plugin-prettier -D
+pnpm add @luma-dev/eslint-config-base -D
 ```
 
 [`@luma-dev/eslint-config-jest`](https://www.npmjs.com/package/@luma-dev/eslint-config-jest)
 
 ```
-pnpm add @luma-dev/eslint-config-jest @luma-dev/eslint-config-base eslint eslint-plugin-jest -D
+pnpm add @luma-dev/eslint-config-jest -D
 ```
 
 [`@luma-dev/eslint-config-next`](https://www.npmjs.com/package/@luma-dev/eslint-config-next)
 
 ```
-pnpm add @luma-dev/eslint-config-next @luma-dev/eslint-config-base eslint eslint-config-next eslint-plugin-next -D
+pnpm add @luma-dev/eslint-config-next -D
 ```
 
 [`@luma-dev/eslint-config-react`](https://www.npmjs.com/package/@luma-dev/eslint-config-react)
 
 ```
-pnpm add @luma-dev/eslint-config-react @luma-dev/eslint-config-base eslint eslint-config-airbnb -D
+pnpm add @luma-dev/eslint-config-react -D
 ```
 
 [`@luma-dev/eslint-config-svelte`](https://www.npmjs.com/package/@luma-dev/eslint-config-svelte)
 
 ```
-pnpm add @luma-dev/eslint-config-svelte @luma-dev/eslint-config-base eslint eslint-plugin-svelte3 -D
+pnpm add @luma-dev/eslint-config-svelte -D
 ```
 
 [`@luma-dev/prettier-config`](https://www.npmjs.com/package/@luma-dev/prettier-config)
