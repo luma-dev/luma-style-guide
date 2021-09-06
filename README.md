@@ -1,5 +1,7 @@
 # Luma Style Guide
 
+[[Luma Style Guide](https://img.shields.io/badge/styled%20with-luma-%23c5ebeb?style=flat-square)](https://github.com/luma-dev/luma-style-guide#readme)
+
 Luma coding style guide, specifically for frontend, JavaScript and TypeScript projects.
 
 NOTICE: Are you about to contirubte the projects with this style? If we're in owners of that project, please make PR at first and I will refer to the rules violated in your PR, so it's unnecessary to read this.
