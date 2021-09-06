@@ -1,3 +1,5 @@
+require('@rushstack/eslint-patch/modern-module-resolution');
+
 const { tsDevFiles, jsDevFiles } = require('./helpers');
 /** @type {import('eslint').Linter.Config} */
 module.exports = {

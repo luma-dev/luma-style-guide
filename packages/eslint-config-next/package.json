@@ -18,13 +18,16 @@
   "scripts": {
     "build": "rimraf \"*.d.ts\" && tsc"
   },
-  "devDependencies": {
-    "@types/eslint": "^7.28.0"
-  },
-  "peerDependencies": {
+  "dependencies": {
+    "@babel/core": "*",
     "@luma-dev/eslint-config-base": "*",
+    "@rushstack/eslint-patch": "*",
+    "@types/eslint": "*",
     "eslint": "*",
     "eslint-config-next": "*",
-    "eslint-plugin-next": "*"
+    "eslint-plugin-next": "*",
+    "next": "*",
+    "react": "*",
+    "react-dom": "*"
   }
 }

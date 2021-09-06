@@ -18,11 +18,10 @@
   "scripts": {
     "build": "rimraf \"*.d.ts\" && tsc"
   },
-  "devDependencies": {
-    "@types/eslint": "^7.28.0"
-  },
-  "peerDependencies": {
+  "dependencies": {
     "@luma-dev/eslint-config-base": "*",
+    "@rushstack/eslint-patch": "*",
+    "@types/eslint": "*",
     "eslint": "*",
     "eslint-plugin-jest": "*"
   }

@@ -18,12 +18,17 @@
   "scripts": {
     "build": "rimraf \"*.d.ts\" && tsc"
   },
-  "devDependencies": {
-    "@types/eslint": "^7.28.0"
-  },
-  "peerDependencies": {
+  "dependencies": {
     "@luma-dev/eslint-config-base": "*",
+    "@rushstack/eslint-patch": "*",
+    "@types/eslint": "*",
+    "@typescript-eslint/eslint-plugin": "*",
+    "@typescript-eslint/parser": "*",
     "eslint": "*",
-    "eslint-config-airbnb": "*"
+    "eslint-config-airbnb": "*",
+    "eslint-plugin-import": "*",
+    "eslint-plugin-jsx-a11y": "*",
+    "eslint-plugin-react": "*",
+    "eslint-plugin-react-hooks": "*"
   }
 }

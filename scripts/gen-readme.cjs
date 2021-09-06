@@ -21,23 +21,15 @@ const splitReadme = (content) => {
   return [before, after];
 };
 
-/**
- * @param {{peerDependencies?: Record<string, string>}} manifest
- * @return {string[]}
- */
-const listPeerDeps = (manifest) => Object.keys(manifest.peerDependencies ?? {});
-
 const [before, after] = splitReadme(readme);
 
 const pkgDesc = pkgs.flatMap((pkg) => {
   const manifest = JSON.parse(fs.readFileSync(path.resolve(projRoot, 'packages', pkg, 'package.json')));
   if (manifest.private) return [];
   const { name } = manifest;
-  const peerDeps = listPeerDeps(manifest);
-  const peers = peerDeps.map((e) => ` ${e}`).join('');
 
   const head = `[\`${name}\`](https://www.npmjs.com/package/${name})`;
-  return [head, '', '```', `pnpm add ${name}${peers} -D`, '```', ''];
+  return [head, '', '```', `pnpm add ${name} -D`, '```', ''];
 });
 
 const readmeOutput = [...before, '## Packages', '', ...pkgDesc, ...after].join('\n');

@@ -19,16 +19,15 @@
     "build": "rimraf \"*.d.ts\" && tsc"
   },
   "dependencies": {
-    "@types/eslint": "^7.28.0"
-  },
-  "devDependencies": {
-    "typescript": "^4.4.2"
-  },
-  "peerDependencies": {
+    "@rushstack/eslint-patch": "*",
+    "@types/eslint": "*",
+    "@typescript-eslint/eslint-plugin": "*",
+    "@typescript-eslint/parser": "*",
     "eslint": "*",
     "eslint-config-airbnb-base": "*",
     "eslint-config-prettier": "*",
     "eslint-plugin-eslint-comments": "*",
+    "eslint-plugin-import": "*",
     "eslint-plugin-json-format": "*",
     "eslint-plugin-prettier": "*"
   }
