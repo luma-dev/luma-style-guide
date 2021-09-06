@@ -49,3 +49,6 @@ jobs:
         uses: changesets/action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          commit: 'chore: version package'
+          title: 'chore: version package'
