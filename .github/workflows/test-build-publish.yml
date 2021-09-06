@@ -70,7 +70,11 @@ jobs:
         run: pnpm lint
       - name: Run tests
         run: pnpm test
-      - name: Configure npm token
+      - if: ${{ github.event_name == 'push' && github.event.ref == 'refs/heads/main' }}
+        name: Configure npm token
         run: pnpm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
-      - name: Publish if needed
+      - name: Publish Dry Run
+        run: pnpm -r publish --dry-run
+      - if: ${{ github.event_name == 'push' && github.event.ref == 'refs/heads/main' }}
+        name: Publish if needed
         run: pnpm -r publish --access public
