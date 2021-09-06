@@ -1,5 +1,11 @@
 # @luma-dev/eslint-config-base
 
+## 0.3.0
+
+### Minor Changes
+
+- fd11690: enable eslint-comments features
+
 ## 0.2.0
 
 ### Minor Changes
