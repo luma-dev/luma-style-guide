@@ -3,7 +3,13 @@ require('@rushstack/eslint-patch/modern-module-resolution');
 /** @type {import('eslint').parserOptions} */
 module.exports = {
   parser: '@typescript-eslint/parser',
-  extends: ['@luma-dev/base/ts', '@luma-dev/unstyle/whitespace', '@luma-dev/unstyle/import/whitespace'],
+  extends: [
+    '@luma-dev/base/ts',
+    '@luma-dev/unstyle/whitespace',
+    '@luma-dev/unstyle/sort',
+    '@luma-dev/unstyle/import/whitespace',
+    '@luma-dev/unstyle/import/sort',
+  ],
   plugins: ['@luma-dev/svelte3'],
 
   parserOptions: {
