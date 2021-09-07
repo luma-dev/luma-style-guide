@@ -1,5 +1,16 @@
 # @luma-dev/eslint-config-svelte
 
+## 0.7.0
+
+### Minor Changes
+
+- 60dd68e: skip prettier
+
+### Patch Changes
+
+- Updated dependencies [60dd68e]
+  - @luma-dev/eslint-config-unstyle@0.3.0
+
 ## 0.6.0
 
 ### Minor Changes
