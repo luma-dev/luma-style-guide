@@ -14,4 +14,6 @@ out/
 build/
 /packages/eslint-config-*/**/*.d.ts
 
+/packages/eslint-plugin-svelte3/*.js
+
 /fail/*

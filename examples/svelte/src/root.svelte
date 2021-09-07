@@ -1,7 +1,14 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
   import JS from './js.svelte';
+
   import { a, b } from './my-stores';
   export let title: string | undefined = undefined;
+
+  onMount(() => {
+    // eslint-disable-next-line no-console
+    console.log('started!');
+  });
 
   const table = [
     { id: 1, show: true, title: 'bar' },
@@ -18,7 +25,7 @@
 </h2>
 
 <div>
-  $a: {$a}, $b: {$b},
+  $a: {$a.slice(1)}, {`$b: ${$b}`},
 </div>
 
 {#each table as row}

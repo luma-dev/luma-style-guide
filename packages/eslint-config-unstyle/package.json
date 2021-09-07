@@ -1,0 +1,23 @@
+{
+  "name": "@luma-dev/eslint-config-unstyle",
+  "version": "0.0.0",
+  "homepage": "https://github.com/luma-dev/luma-style-guide#readme",
+  "bugs": {
+    "url": "https://github.com/luma-dev/luma-style-guide/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luma-dev/luma-style-guide.git",
+    "directory": "packages/eslint-config-unstyle"
+  },
+  "license": "MIT",
+  "author": "Luma <world@luma.email>",
+  "scripts": {
+    "build": "rimraf \"*.d.ts\" \"imports/*.d.ts\" && tsc"
+  },
+  "dependencies": {
+    "@rushstack/eslint-patch": "*",
+    "@types/eslint": "*",
+    "eslint": "*"
+  }
+}

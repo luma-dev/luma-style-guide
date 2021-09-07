@@ -20,9 +20,13 @@
   },
   "dependencies": {
     "@luma-dev/eslint-config-base": "*",
+    "@luma-dev/eslint-config-unstyle": "workspace:*",
+    "@luma-dev/eslint-plugin-svelte3": "workspace:*",
     "@rushstack/eslint-patch": "*",
     "@types/eslint": "*",
     "eslint": "*",
-    "eslint-plugin-svelte3": "*"
+    "eslint-config-airbnb-base": "*",
+    "eslint-plugin-eslint-comments": "*",
+    "eslint-plugin-import": "*"
   }
 }
