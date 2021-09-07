@@ -106,7 +106,7 @@ And _root_ refers to monorepo root if monorepo, otherwise the single directory i
   - `save-prefix=` for application pacakges.
 - Use `commitlint` with `'@commitlint/config-conventional'`.
 - Use `eslnit` with `'@luma-dev/base'` and correspoing ones.
-  - Avoid using `eslint-ignore` directives.
+  - Avoid using `eslint-disable` directives.
 - Use `husky` to help developing.
 - Use `prettier` with `"@luma-dev/prettier-config"`.
   - File types except JavaScript and TypeScript, run `prettier` by itself.
