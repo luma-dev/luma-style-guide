@@ -1,5 +1,11 @@
 # @luma-dev/eslint-config-svelte
 
+## 0.4.0
+
+### Minor Changes
+
+- 6cd2b76: avoid breaking svelte file; style and export let undef init
+
 ## 0.3.0
 
 ### Minor Changes
