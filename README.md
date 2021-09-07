@@ -38,6 +38,18 @@ pnpm add @luma-dev/eslint-config-react -D
 pnpm add @luma-dev/eslint-config-svelte -D
 ```
 
+[`@luma-dev/eslint-config-unstyle`](https://www.npmjs.com/package/@luma-dev/eslint-config-unstyle)
+
+```
+pnpm add @luma-dev/eslint-config-unstyle -D
+```
+
+[`@luma-dev/eslint-plugin-svelte3`](https://www.npmjs.com/package/@luma-dev/eslint-plugin-svelte3)
+
+```
+pnpm add @luma-dev/eslint-plugin-svelte3 -D
+```
+
 [`@luma-dev/prettier-config`](https://www.npmjs.com/package/@luma-dev/prettier-config)
 
 ```
