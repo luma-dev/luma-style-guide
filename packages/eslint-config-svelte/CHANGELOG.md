@@ -1,5 +1,16 @@
 # @luma-dev/eslint-config-svelte
 
+## 0.8.0
+
+### Minor Changes
+
+- 3f16974: improve svelte preprocessor
+
+### Patch Changes
+
+- Updated dependencies [3f16974]
+  - @luma-dev/eslint-plugin-svelte3@0.2.0
+
 ## 0.7.1
 
 ### Patch Changes
