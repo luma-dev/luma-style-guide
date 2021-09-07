@@ -5,6 +5,7 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   extends: [
     '@luma-dev/base/ts',
+    // Rules with line jumping in auto-fixing is inapplicable.
     '@luma-dev/unstyle/whitespace',
     '@luma-dev/unstyle/sort',
     '@luma-dev/unstyle/import/whitespace',

@@ -1,7 +1,7 @@
-const { new_block, get_translation } = require("./block");
-const { processor_options } = require("./processor_options");
-const { state } = require("./state");
-const { DocumentMapper } = require("./mapping");
+const { get_translation, new_block } = require("./block.js");
+const { processor_options } = require("./processor_options.js");
+const { state } = require("./state.js");
+const { DocumentMapper } = require("./mapping.js");
 
 let default_compiler;
 
@@ -22,6 +22,12 @@ const find_contextual_names = (compiler, node) => {
     }
   }
 };
+const tsLet = (name) =>
+  name[0] === "$"
+    ? `declare let ${name}:Parameters<Parameters<typeof ${
+      name.slice(1)
+    }.subscribe>[0]>[0];`
+    : `let ${name};`;
 
 // extract scripts to lint from component definition
 exports.preprocess = (text) => {
@@ -33,19 +39,16 @@ exports.preprocess = (text) => {
       /<style(\s[^]*?)?>[^]*?<\/style>/gi,
       (match, attributes = "") => {
         const attrs = {};
-        attributes
-          .split(/\s+/)
-          .filter(Boolean)
-          .forEach((attr) => {
-            const p = attr.indexOf("=");
-            if (p === -1) {
-              attrs[attr] = true;
-            } else {
-              attrs[attr.slice(0, p)] = "'\"".includes(attr[p + 1])
-                ? attr.slice(p + 2, -1)
-                : attr.slice(p + 1);
-            }
-          });
+        attributes.split(/\s+/).filter(Boolean).forEach((attr) => {
+          const p = attr.indexOf("=");
+          if (p === -1) {
+            attrs[attr] = true;
+          } else {
+            attrs[attr.slice(0, p)] = "'\"".includes(attr[p + 1])
+              ? attr.slice(p + 2, -1)
+              : attr.slice(p + 1);
+          }
+        });
         return processor_options.ignore_styles(attrs)
           ? match.replace(/\S/g, " ")
           : match;
@@ -75,11 +78,9 @@ exports.preprocess = (text) => {
   const { ast, warnings, vars, mapper } = result;
 
   const references_and_reassignments = `{${
-    vars
-      .filter((v) => v.referenced || v.name[0] === "$")
-      .map((v) => v.name)
+    vars.filter((v) => v.referenced || v.name[0] === "$").map((v) => v.name)
   };${
-    vars.filter((v) => v.reassigned || v.export_name).map((v) => `${v.name}=0`)
+    vars.filter((v) => v.reassigned || v.export_name).map((v) => v.name + "=0")
   }}`;
   state.var_names = new Set(vars.map((v) => v.name));
 
@@ -135,23 +136,23 @@ exports.preprocess = (text) => {
     state.blocks.set(with_file_ending("instance"), block);
 
     if (ast.module && processor_options.typescript) {
-      block.transformed_code = vars
-        .filter((v) => v.injected)
-        .map((v) =>
-          `declare let ${v.name}: Parameters<Parameters<typeof (${
-            v.name.slice(1)
-          }).subscribe>[0]>[0];`
-        )
-        .join("");
+      block.transformed_code = vars.filter((v) => v.injected).map((v) =>
+        tsLet(v.name)
+      ).join("");
       block.transformed_code += text.slice(
         ast.module.content.start,
         ast.module.content.end,
       );
     } else {
-      block.transformed_code = vars
-        .filter((v) => v.injected || v.module)
-        .map((v) => `let ${v.name};`)
-        .join("");
+      if (processor_options.typescript) {
+        block.transformed_code = vars.filter((v) => v.injected || v.module).map(
+          (v) => tsLet(v.name),
+        ).join("");
+      } else {
+        block.transformed_code = vars.filter((v) => v.injected || v.module).map(
+          (v) => `let ${v.name};`,
+        ).join("");
+      }
     }
 
     get_translation(text, block, ast.instance.content);
@@ -174,14 +175,9 @@ exports.preprocess = (text) => {
       }
       if (ast.instance) {
         block.transformed_code += "\n";
-        block.transformed_code += vars
-          .filter((v) => v.injected)
-          .map((v) =>
-            `declare let ${v.name}: Parameters<Parameters<typeof (${
-              v.name.slice(1)
-            }).subscribe>[0]>[0];`
-          )
-          .join("");
+        block.transformed_code += vars.filter((v) => v.injected).map((v) =>
+          tsLet(v.name)
+        ).join("");
         block.transformed_code += text.slice(
           ast.instance.content.start,
           ast.instance.content.end,
@@ -197,8 +193,9 @@ exports.preprocess = (text) => {
       enter(node, parent, prop) {
         if (prop === "expression") {
           return this.skip();
-        }
-        if (prop === "attributes" && "'\"".includes(text[node.end - 1])) {
+        } else if (
+          prop === "attributes" && "'\"".includes(text[node.end - 1])
+        ) {
           in_quoted_attribute = true;
         }
         contextual_names.length = 0;
@@ -210,10 +207,9 @@ exports.preprocess = (text) => {
         } else if (node.type === "CatchBlock") {
           find_contextual_names(compiler, parent.error);
         } else if (node.type === "Element" || node.type === "InlineComponent") {
-          node.attributes.forEach(
-            (node) =>
-              node.type === "Let" &&
-              find_contextual_names(compiler, node.expression || node.name),
+          node.attributes.forEach((node) =>
+            node.type === "Let" &&
+            find_contextual_names(compiler, node.expression || node.name)
           );
         }
         if (contextual_names.length) {
@@ -244,9 +240,9 @@ exports.preprocess = (text) => {
     });
 
     block.transformed_code += `{${
-      vars
-        .filter((v) => v.referenced_from_script || v.name[0] === "$")
-        .map((v) => v.name)
+      vars.filter((v) => v.referenced_from_script || v.name[0] === "$").map(
+        (v) => v.name,
+      )
     }}`;
   }
 
@@ -297,67 +293,69 @@ function compile_code(text, compiler, processor_options) {
       generate: false,
       ...processor_options.compiler_options,
     });
-  }
-  const diffs = [];
-  let accumulated_diff = 0;
-  const transpiled = text.replace(
-    /<script(\s[^]*?)?>([^]*?)<\/script>/gi,
-    (match, attributes = "", content) => {
-      const output = ts.transpileModule(content, {
-        reportDiagnostics: false,
-        compilerOptions: {
-          target: ts.ScriptTarget.ESNext,
-          importsNotUsedAsValues: ts.ImportsNotUsedAsValues.Preserve,
-          sourceMap: true,
-        },
-        transformers: {
-          before: [ts_import_transformer],
-        },
-      });
-      const original_start = text.indexOf(content);
-      const generated_start = accumulated_diff + original_start;
-      accumulated_diff += output.outputText.length - content.length;
-      diffs.push({
-        original_start,
-        generated_start,
-        generated_end: generated_start + output.outputText.length,
-        diff: output.outputText.length - content.length,
-        original_content: content,
-        generated_content: output.outputText,
-        map: output.sourceMapText,
-      });
-      return `<script${attributes}>${output.outputText}</script>`;
-    },
-  );
-  const mapper = new DocumentMapper(text, transpiled, diffs);
+  } else {
+    const diffs = [];
+    let accumulated_diff = 0;
+    const transpiled = text.replace(
+      /<script(\s[^]*?)?>([^]*?)<\/script>/gi,
+      (match, attributes = "", content) => {
+        const output = ts.transpileModule(content, {
+          reportDiagnostics: false,
+          compilerOptions: {
+            target: ts.ScriptTarget.ESNext,
+            importsNotUsedAsValues: ts.ImportsNotUsedAsValues.Preserve,
+            sourceMap: true,
+          },
+          transformers: {
+            before: [ts_import_transformer],
+          },
+        });
+        const original_start = text.indexOf(content);
+        const generated_start = accumulated_diff + original_start;
+        accumulated_diff += output.outputText.length - content.length;
+        diffs.push({
+          original_start: original_start,
+          generated_start: generated_start,
+          generated_end: generated_start + output.outputText.length,
+          diff: output.outputText.length - content.length,
+          original_content: content,
+          generated_content: output.outputText,
+          map: output.sourceMapText,
+        });
+        return `<script${attributes}>${output.outputText}</script>`;
+      },
+    );
+    const mapper = new DocumentMapper(text, transpiled, diffs);
 
-  let ts_result;
-  try {
-    ts_result = compiler.compile(transpiled, {
-      generate: false,
-      ...processor_options.compiler_options,
-    });
-  } catch (err) {
-    // remap the error to be in the correct spot and rethrow it
-    err.start = mapper.get_original_position(err.start);
-    err.end = mapper.get_original_position(err.end);
-    throw err;
-  }
+    let ts_result;
+    try {
+      ts_result = compiler.compile(transpiled, {
+        generate: false,
+        ...processor_options.compiler_options,
+      });
+    } catch (err) {
+      // remap the error to be in the correct spot and rethrow it
+      err.start = mapper.get_original_position(err.start);
+      err.end = mapper.get_original_position(err.end);
+      throw err;
+    }
 
-  text = text.replace(
-    /<script(\s[^]*?)?>([^]*?)<\/script>/gi,
-    (match, attributes = "", content) =>
-      `<script${attributes}>${
-        content
-          // blank out the content
-          .replace(/[^\n]/g, " ")
-          // excess blank space can make the svelte parser very slow (sec->min). break it up with comments (works in style/script)
-          .replace(/[^\n][^\n][^\n][^\n]\n/g, "/**/\n")
-      }</script>`,
-  );
-  // if we do a full recompile Svelte can fail due to the blank script tag not declaring anything
-  // so instead we just parse for the AST (which is likely faster, anyways)
-  const ast = compiler.parse(text, { ...processor_options.compiler_options });
-  const { warnings, vars } = ts_result;
-  return { ast, warnings, vars, mapper };
+    text = text.replace(
+      /<script(\s[^]*?)?>([^]*?)<\/script>/gi,
+      (match, attributes = "", content) => {
+        return `<script${attributes}>${
+          content
+            // blank out the content
+            .replace(/[^\n]/g, " ")
+            // excess blank space can make the svelte parser very slow (sec->min). break it up with comments (works in style/script)
+            .replace(/[^\n][^\n][^\n][^\n]\n/g, "/**/\n")
+        }</script>`;
+      },
+    );
+    // if we do a full recompile Svelte can fail due to the blank script tag not declaring anything
+    // so instead we just parse for the AST (which is likely faster, anyways)
+    const ast = compiler.parse(text, { ...processor_options.compiler_options });
+    const { warnings, vars } = ts_result;
+    return { ast, warnings, vars, mapper };
+  }
 }
