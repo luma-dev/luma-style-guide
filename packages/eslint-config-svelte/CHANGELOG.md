@@ -1,5 +1,17 @@
 # @luma-dev/eslint-config-svelte
 
+## 0.5.0
+
+### Minor Changes
+
+- 9755e47: tools to suppress breaking format rules
+
+### Patch Changes
+
+- Updated dependencies [9755e47]
+  - @luma-dev/eslint-config-unstyle@0.1.0
+  - @luma-dev/eslint-plugin-svelte3@0.1.0
+
 ## 0.4.0
 
 ### Minor Changes

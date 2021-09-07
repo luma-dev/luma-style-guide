@@ -1,5 +1,11 @@
 # @luma-dev/eslint-config-react
 
+## 0.3.0
+
+### Minor Changes
+
+- 9755e47: tools to suppress breaking format rules
+
 ## 0.2.1
 
 ### Patch Changes
