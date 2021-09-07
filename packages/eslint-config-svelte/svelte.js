@@ -77,6 +77,16 @@ module.exports = {
     '@typescript-eslint/restrict-plus-operands': 'error',
     '@typescript-eslint/restrict-template-expressions': 'error',
     '@typescript-eslint/unbound-method': 'error',
+    // keep styling
+    'arrow-spacing': 'off',
+    'generator-star-spacing': 'off',
+    'arrow-body-style': 'off',
+    'rest-spread-spacing': 'off',
+    'template-curly-spacing': 'off',
+    'yield-star-spacing': 'off',
+    // svelte
+    // svelte uses `export let ... = undefined` as optional props.
+    'no-undef-init': 'off',
     'import/prefer-default-export': 'off',
     'import/no-mutable-exports': 'off',
     'import/no-unresolved': [

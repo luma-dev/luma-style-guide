@@ -67,13 +67,17 @@ failProjs.forEach((p) => {
           throw new Error(`[TEST-CONFIG-ERROR] no patterns declared in test file ${patFile}`);
         }
 
-        const notFound = pats.map((pat) => [stderr.search(pat) >= 0, pat]).filter(([ok]) => !ok);
+        const notFound = pats
+          .map((pat) => [pat[0] === '!' ? !stderr.search(pat.slice(1)) : stderr.search(pat) >= 0, pat])
+          .filter(([ok]) => !ok);
         if (notFound.length > 0) {
           throw new Error(
-            `${notFound.length} patterns are not found in error:\n${stderr
+            `${notFound.length} patterns are not matched for error:\n${stderr
               .split('\n')
               .map((line) => `\t${line}`)
-              .join('\n')}\nPatterns not found are:\n${notFound.map(([, pat], i) => `\t#${i + 1}: ${pat}`).join('\n')}`,
+              .join('\n')}\nPatterns not matched are:\n${notFound
+              .map(([, pat], i) => `\t#${i + 1}: ${pat}`)
+              .join('\n')}`,
           );
         }
       }

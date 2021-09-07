@@ -1,4 +1,5 @@
 <script lang="ts">
+  export let title: string | undefined = undefined;
   // FAIL-TEST: eslint
   console.log('');
   // FAIL-TEST: prettier
@@ -13,6 +14,9 @@
 </script>
 
 <h1>TypeScript Svelte File</h1>
+<h2>
+  title: {title}
+</h2>
 
 <!-- FAIL-TEST: prettier -->
 { greeting }
