@@ -1,5 +1,12 @@
 # @luma-dev/eslint-config-svelte
 
+## 0.7.1
+
+### Patch Changes
+
+- Updated dependencies [dac237e]
+  - @luma-dev/eslint-config-unstyle@0.4.0
+
 ## 0.7.0
 
 ### Minor Changes

@@ -1,5 +1,11 @@
 # @luma-dev/eslint-config-unstyle
 
+## 0.4.0
+
+### Minor Changes
+
+- dac237e: ignore duplicates if unstyle import/sort
+
 ## 0.3.0
 
 ### Minor Changes
