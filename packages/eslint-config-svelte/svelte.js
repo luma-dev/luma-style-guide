@@ -9,6 +9,10 @@ module.exports = {
     '@luma-dev/unstyle/sort',
     '@luma-dev/unstyle/import/whitespace',
     '@luma-dev/unstyle/import/sort',
+    // Prettier should be run separately.
+    // prettier-plugin-svelte should be installed in the directory
+    // in which prettier would be run.
+    '@luma-dev/unstyle/prettier',
   ],
   plugins: ['@luma-dev/svelte3'],
 
