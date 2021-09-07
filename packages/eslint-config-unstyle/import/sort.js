@@ -4,5 +4,6 @@ require('@rushstack/eslint-patch/modern-module-resolution');
 module.exports = {
   rules: {
     'import/order': 'off',
+    'import/no-duplicates': 'off',
   },
 };
