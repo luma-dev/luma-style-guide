@@ -243,3 +243,7 @@ module.exports = {
 ```md
 [![Luma Style Guide](https://img.shields.io/badge/styled%20with-luma-%23c5ebeb?style=flat-square)](https://github.com/luma-dev/luma-style-guide#readme)
 ```
+
+### Examples
+
+You can find the real examples by searching [topics/luma-style](https://github.com/topics/luma-style).
