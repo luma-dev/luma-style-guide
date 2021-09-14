@@ -28,5 +28,8 @@
     "eslint-config-airbnb-base": "*",
     "eslint-plugin-eslint-comments": "*",
     "eslint-plugin-import": "*"
+  },
+  "engines": {
+    "node": ">=14"
   }
 }
