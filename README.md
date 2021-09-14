@@ -171,6 +171,7 @@ module.exports = {
 ; .npmrc
 engine-strict=true
 strict-peer-dependencies=true
+shamefully-hoist=false
 save-prefix=
 ```
 
