@@ -20,5 +20,6 @@ module.exports = {
     'no-use-before-define': 'off',
     'import/no-extraneous-dependencies': 'off',
     'no-void': ['error', { allowAsStatement: true }],
+    'arrow-body-style': 'off',
   },
 };
