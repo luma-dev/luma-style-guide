@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@babel/core": "*",
-    "@luma-dev/eslint-config-base": "*",
+    "@luma-dev/eslint-config-base": ">=0.2.0",
     "@rushstack/eslint-patch": "*",
     "@types/eslint": "*",
     "eslint": "*",
@@ -29,5 +29,8 @@
     "next": "*",
     "react": "*",
     "react-dom": "*"
+  },
+  "engines": {
+    "node": ">=14"
   }
 }

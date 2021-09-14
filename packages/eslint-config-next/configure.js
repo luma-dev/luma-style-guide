@@ -1,16 +1,19 @@
 const path = require('path');
 
 /**
- * @param {string} dirname
+ * @param {import('@luma-dev/eslint-config-base').Config} config
  * @return {import('eslint').Linter.ConfigOverride[]}
  */
-const configureNext = (dirname) => [
-  {
-    files: ['*.js', '*.jsx', '*.ts', '*.tsx'],
-    rules: {
-      '@next/next/no-html-link-for-pages': ['error', path.join(dirname, 'src/pages')],
+const configureNext = (config) => {
+  const { __dirname } = config;
+  return [
+    {
+      files: ['*.js', '*.jsx', '*.ts', '*.tsx'],
+      rules: {
+        '@next/next/no-html-link-for-pages': ['error', path.join(__dirname, 'src/pages')],
+      },
     },
-  },
-];
+  ];
+};
 
 module.exports = configureNext;
