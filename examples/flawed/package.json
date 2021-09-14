@@ -1,0 +1,9 @@
+{
+  "name": "example-flawed",
+  "private": true,
+  "engines": {
+    "npm": "forbidden, use npm",
+    "pnpm": ">=6",
+    "yarn": "forbidden, use npm"
+  }
+}
