@@ -53,3 +53,13 @@ exports.jsConfigFiles = jsConfigFiles;
 
 const jsDevFiles = () => [...jsTestFiles(), ...jsConfigFiles()];
 exports.jsDevFiles = jsDevFiles;
+
+/**
+ * @param {(string | RegExp | null | undefined)[]=} unresolvable
+ * @return {string[]}
+ */
+const convertUnresolvableToPatterns = (unresolvable) =>
+  // Known not needed to escape package name chars.
+  (unresolvable ?? []).filter((e) => `^${e}$`).map((e) => (typeof e === 'string' ? e : e.toString()));
+
+exports.convertUnresolvableToPatterns = convertUnresolvableToPatterns;

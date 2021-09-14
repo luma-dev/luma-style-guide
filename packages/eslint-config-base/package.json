@@ -26,9 +26,14 @@
     "eslint": "*",
     "eslint-config-airbnb-base": "*",
     "eslint-config-prettier": "*",
+    "eslint-import-resolver-node": "*",
+    "eslint-import-resolver-typescript": "*",
     "eslint-plugin-eslint-comments": "*",
     "eslint-plugin-import": "*",
     "eslint-plugin-json-format": "*",
     "eslint-plugin-prettier": "*"
+  },
+  "engines": {
+    "node": ">=14"
   }
 }
