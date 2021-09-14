@@ -1,5 +1,13 @@
 # @luma-dev/eslint-config-react
 
+## 0.3.1
+
+### Patch Changes
+
+- b0428ee: add nodejs engine restriction
+- Updated dependencies [dec752c]
+  - @luma-dev/eslint-config-base@0.4.0
+
 ## 0.3.0
 
 ### Minor Changes

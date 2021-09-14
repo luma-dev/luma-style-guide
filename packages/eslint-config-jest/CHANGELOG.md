@@ -1,5 +1,13 @@
 # @luma-dev/eslint-config-jest
 
+## 0.2.2
+
+### Patch Changes
+
+- 4aa54bb: add node version restriction
+- Updated dependencies [dec752c]
+  - @luma-dev/eslint-config-base@0.4.0
+
 ## 0.2.1
 
 ### Patch Changes

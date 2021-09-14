@@ -1,5 +1,16 @@
 # @luma-dev/eslint-config-next
 
+## 0.3.0
+
+### Minor Changes
+
+- 270e99d: change config interface alongside base
+
+### Patch Changes
+
+- Updated dependencies [dec752c]
+  - @luma-dev/eslint-config-base@0.4.0
+
 ## 0.2.1
 
 ### Patch Changes
