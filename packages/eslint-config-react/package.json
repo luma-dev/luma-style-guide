@@ -32,5 +32,8 @@
     "eslint-plugin-prettier": "*",
     "eslint-plugin-react": "*",
     "eslint-plugin-react-hooks": "*"
+  },
+  "engines": {
+    "node": ">=14"
   }
 }
