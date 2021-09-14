@@ -48,9 +48,6 @@ importers:
       ts-jest: 27.0.5_92306e36c1a4cf876b1cd4839a977b9c
       typescript: 4.3.5
 
-  examples/flawed:
-    specifiers: {}
-
   examples/next:
     specifiers:
       '@babel/core': 7.15.0
@@ -59,7 +56,6 @@ importers:
       '@types/node': 12.12.21
       '@types/react': 17.0.2
       '@types/react-dom': 17.0.1
-      example-flawed: workspace:*
       next: 11.1.2
       react: 17.0.2
       react-dom: 17.0.2
@@ -75,7 +71,6 @@ importers:
       '@types/node': 12.12.21
       '@types/react': 17.0.2
       '@types/react-dom': 17.0.1
-      example-flawed: link:../flawed
       typescript: 4.3.5
 
   examples/react:
