@@ -1,5 +1,11 @@
 # @luma-dev/eslint-config-base
 
+## 0.5.0
+
+### Minor Changes
+
+- 9982e7e: disable arrow-body-style
+
 ## 0.4.0
 
 ### Minor Changes
