@@ -1,5 +1,16 @@
 # @luma-dev/eslint-config-svelte
 
+## 0.9.0
+
+### Minor Changes
+
+- 6d5429b: change config interface alongside base
+
+### Patch Changes
+
+- Updated dependencies [dec752c]
+  - @luma-dev/eslint-config-base@0.4.0
+
 ## 0.8.0
 
 ### Minor Changes

@@ -1,5 +1,11 @@
 # @luma-dev/eslint-config-base
 
+## 0.4.0
+
+### Minor Changes
+
+- dec752c: change config interface and add .unresolvable config
+
 ## 0.3.0
 
 ### Minor Changes
