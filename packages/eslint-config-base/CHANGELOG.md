@@ -1,5 +1,11 @@
 # @luma-dev/eslint-config-base
 
+## 0.6.0
+
+### Minor Changes
+
+- 283f493: split out js-ts rule
+
 ## 0.5.0
 
 ### Minor Changes
