@@ -14,12 +14,10 @@ module.exports = {
   extends: [
     'airbnb-base',
     'plugin:@typescript-eslint/recommended',
-    'prettier',
     'plugin:import/typescript',
     'plugin:eslint-comments/recommended',
+    './js-ts',
   ],
-
-  plugins: ['prettier', 'eslint-comments'],
 
   rules: {
     '@typescript-eslint/no-unused-vars': [
@@ -28,14 +26,9 @@ module.exports = {
         argsIgnorePattern: '^_',
       },
     ],
-    'no-underscore-dangle': 'off',
-    'no-console': 'error',
     '@typescript-eslint/explicit-module-boundary-types': 'error',
     '@typescript-eslint/no-floating-promises': 'error',
-    'no-lone-blocks': 'off',
     '@typescript-eslint/no-implicit-any-catch': 'error',
-    'eslint-comments/no-unused-disable': 'error',
-    'import/extensions': 'off',
     '@typescript-eslint/consistent-type-imports': [
       'error',
       {
@@ -49,13 +42,5 @@ module.exports = {
       },
     ],
     '@typescript-eslint/no-unsafe-return': 'error',
-    'prettier/prettier': ['error'],
-    'no-shadow': 'off',
-    'import/no-anonymous-default-export': 'error',
-    'no-use-before-define': 'off',
-
-    'import/no-extraneous-dependencies': 'off',
-    'no-void': ['error', { allowAsStatement: true }],
-    'arrow-body-style': 'off',
   },
 };
