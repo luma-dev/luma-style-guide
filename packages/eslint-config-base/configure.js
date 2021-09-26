@@ -20,7 +20,7 @@ const configureBase = (config) => {
       },
     },
     {
-      files: ['*.js', '*.cjs', '*.mjs', '*.ts', '*.tsx'],
+      files: ['*.js', '*.jsx', '*.cjs', '*.mjs', '*.ts', '*.tsx'],
       rules: {
         'import/no-unresolved': [
           'error',

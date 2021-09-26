@@ -15,7 +15,7 @@ module.exports = {
       extends: ['./cjs'],
     },
     {
-      files: ['*.js', '*.mjs'],
+      files: ['*.js', '*.jsx', '*.mjs'],
       extends: ['./mjs'],
     },
     {
