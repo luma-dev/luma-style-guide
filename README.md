@@ -131,8 +131,9 @@ And _root_ refers to monorepo root if monorepo, otherwise the single directory i
   - Build steps should run in reproducable environments like CI or Container.
 - Keep top level directory simple, so prefer to pack sources in `src/` directory.
 - Use `"type": "module"` in `package.json` if possible.
+- Write `"type": "commonjs"` explicitly.
 - Use ESModule rather than CommonJS in setting files.
-- Use `.js` instead of `.mjs` or `.m.js`.
+- Use `.js` instead of `.mjs` if `"type": "module"` set in manifest.
 - Follow [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript) preceded by [`@luma-dev/prettier-config`](./packages/prettier-config/index.json).
 
 ### Package manifest version specifier rules

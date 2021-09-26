@@ -52,13 +52,10 @@ const jsTestFiles = () => [
   '*.test.js',
   '*.test.jsx',
   '*.test.mjs',
-  '*.test.m.js',
-  '*.test.m.jsx',
   '*.test.cjs',
   '*.spec.js',
   '*.spec.jsx',
   '*.spec.mjs',
-  '*.spec.m.js',
   '*.spec.cjs',
 ];
 exports.jsTestFiles = jsTestFiles;
@@ -68,12 +65,10 @@ const jsConfigFiles = () => [
   '*.config.jsx',
   '*.config.cjs',
   '*.config.mjs',
-  '*.config.m.js',
   '.*.js',
   '.*.jsx',
   '.*.cjs',
   '.*.mjs',
-  '.*.m.js',
 ];
 exports.jsConfigFiles = jsConfigFiles;
 
