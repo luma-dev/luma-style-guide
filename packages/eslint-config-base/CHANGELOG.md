@@ -1,5 +1,11 @@
 # @luma-dev/eslint-config-base
 
+## 0.7.0
+
+### Minor Changes
+
+- 68c11c7: fix: files pattern fix for subdirs
+
 ## 0.6.0
 
 ### Minor Changes
