@@ -1,5 +1,12 @@
 # @luma-dev/eslint-config-base
 
+## 0.8.0
+
+### Minor Changes
+
+- 09bab25: feat: disable no-await-in-loop for dev
+- 6240cd6: fix: eliminate .m.js rules
+
 ## 0.7.0
 
 ### Minor Changes
