@@ -6,6 +6,7 @@ module.exports = {
     'no-console': 'off',
     'no-restricted-syntax': 'off',
     'no-param-reassign': 'off',
+    'no-await-in-loop': 'off',
 
     'import/no-anonymous-default-export': 'off',
     'import/no-dynamic-require': 'off',
