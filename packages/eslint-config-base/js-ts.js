@@ -6,20 +6,21 @@ module.exports = {
   plugins: ['import', 'eslint-comments', 'prettier'],
   rules: {
     'no-underscore-dangle': 'off',
-    'no-console': 'error',
     'no-lone-blocks': 'off',
     'eslint-comments/no-unused-disable': 'error',
     'no-shadow': 'off',
-    'no-void': ['error', { allowAsStatement: true }],
     'arrow-body-style': 'off',
+    'no-use-before-define': 'off',
+    'no-return-await': 'off',
+    'no-console': 'error',
+    'no-void': ['error', { allowAsStatement: true }],
+    quotes: ['error', 'single'],
 
     'prettier/prettier': ['error'],
 
     'import/extensions': 'off',
-    'import/no-anonymous-default-export': 'error',
-    'no-use-before-define': 'off',
-
     'import/no-extraneous-dependencies': 'off',
     'import/prefer-default-export': 'off',
+    'import/no-anonymous-default-export': 'error',
   },
 };

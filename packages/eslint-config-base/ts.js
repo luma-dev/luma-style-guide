@@ -42,5 +42,6 @@ module.exports = {
       },
     ],
     '@typescript-eslint/no-unsafe-return': 'error',
+    '@typescript-eslint/no-unsafe-assignment': 'error',
   },
 };
