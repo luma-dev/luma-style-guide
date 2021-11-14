@@ -1,5 +1,11 @@
 # @luma-dev/eslint-config-base
 
+## 0.9.0
+
+### Minor Changes
+
+- f204171: feat: no-unsafe-assignment, quotes
+
 ## 0.8.0
 
 ### Minor Changes
