@@ -10,6 +10,7 @@ module.exports = {
   },
 
   rules: {
+    'react/function-component-definition': ['error', { namedComponents: 'arrow-function' }],
     'react/jsx-filename-extension': ['error', { extensions: ['.tsx'] }],
     'react/prop-types': ['off', {}],
   },

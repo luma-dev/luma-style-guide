@@ -4,13 +4,13 @@
   "compilerOptions": {
     "moduleResolution": "node",
     "target": "es2017",
-    "importsNotUsedAsValues": "error",
+    "importsNotUsedAsValues": "remove",
     "isolatedModules": true,
     "sourceMap": true,
     "strict": true,
     "esModuleInterop": false,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "jsx": "react-jsx"
+    "jsx": "preserve"
   }
 }
