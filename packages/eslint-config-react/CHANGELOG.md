@@ -1,5 +1,11 @@
 # @luma-dev/eslint-config-react
 
+## 0.4.0
+
+### Minor Changes
+
+- 6f05298: enable react/function-component-definition
+
 ## 0.3.6
 
 ### Patch Changes
