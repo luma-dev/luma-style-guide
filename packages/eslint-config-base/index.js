@@ -23,6 +23,10 @@ module.exports = {
       extends: ['./ts'],
     },
     {
+      files: ['*.d.ts'],
+      extends: ['./dts'],
+    },
+    {
       files: tsDevFiles(),
       extends: ['./ts-dev'],
     },

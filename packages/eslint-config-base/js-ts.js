@@ -14,7 +14,14 @@ module.exports = {
     'no-return-await': 'off',
     'no-console': 'error',
     'no-void': ['error', { allowAsStatement: true }],
-    quotes: ['error', 'single'],
+    quotes: ['error', 'single', { avoidEscape: true }],
+    'prefer-destructuring': 'off',
+    'no-param-reassign': 'off',
+    'global-require': 'off',
+    'no-restricted-syntax': 'off',
+    'no-await-in-loop': 'off',
+    camelcase: 'off',
+    'no-continue': 'off',
 
     'prettier/prettier': ['error'],
 
