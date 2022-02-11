@@ -1,5 +1,11 @@
 # @luma-dev/eslint-config-base
 
+## 0.10.0
+
+### Minor Changes
+
+- 1feecda: prettier-plugin-organize-imports and rule updates
+
 ## 0.9.0
 
 ### Minor Changes

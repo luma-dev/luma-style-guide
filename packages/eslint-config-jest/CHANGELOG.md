@@ -1,5 +1,12 @@
 # @luma-dev/eslint-config-jest
 
+## 0.2.8
+
+### Patch Changes
+
+- Updated dependencies [1feecda]
+  - @luma-dev/eslint-config-base@0.10.0
+
 ## 0.2.7
 
 ### Patch Changes
