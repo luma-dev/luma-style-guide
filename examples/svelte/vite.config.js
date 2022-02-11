@@ -1,8 +1,8 @@
 import { svelte } from '@sveltejs/vite-plugin-svelte';
-import { defineConfig } from 'vite';
-import vitePluginWindicss from 'vite-plugin-windicss';
 import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
+import { defineConfig } from 'vite';
+import vitePluginWindicss from 'vite-plugin-windicss';
 
 export default defineConfig(({ mode }) => {
   const isProduction = mode === 'production';

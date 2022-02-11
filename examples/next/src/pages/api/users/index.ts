@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse, NextApiHandler } from 'next';
+import type { NextApiHandler, NextApiRequest, NextApiResponse } from 'next';
 import sampleUserData from '../../../utils/sample-data';
 
 const handler: NextApiHandler = (_req: NextApiRequest, res: NextApiResponse) => {

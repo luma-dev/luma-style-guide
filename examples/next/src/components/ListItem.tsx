@@ -1,7 +1,6 @@
-import * as React from 'react';
-import type { FC } from 'react';
 import Link from 'next/link';
-
+import type { FC } from 'react';
+import * as React from 'react';
 import type { User } from '../interfaces';
 
 type Props = {

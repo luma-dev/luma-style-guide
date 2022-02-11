@@ -1,6 +1,6 @@
 import 'windi.css';
-import './styles.css';
 import Root from './root.svelte';
+import './styles.css';
 
 const root = new Root({
   target: document.body,

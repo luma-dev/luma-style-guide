@@ -1,7 +1,7 @@
-import * as React from 'react';
 import type { FC } from 'react';
-import ListItem from './ListItem';
+import * as React from 'react';
 import type { User } from '../interfaces';
+import ListItem from './ListItem';
 
 type Props = {
   items: User[];

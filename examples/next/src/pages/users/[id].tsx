@@ -1,10 +1,9 @@
+import type { GetStaticPaths, GetStaticProps } from 'next';
 import type { FC } from 'react';
-import type { GetStaticProps, GetStaticPaths } from 'next';
-
-import type { User } from '../../interfaces';
-import sampleUserData from '../../utils/sample-data';
 import Layout from '../../components/Layout';
 import ListDetail from '../../components/ListDetail';
+import type { User } from '../../interfaces';
+import sampleUserData from '../../utils/sample-data';
 
 type Props = {
   item?: User;
