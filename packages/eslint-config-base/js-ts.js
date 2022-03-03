@@ -25,6 +25,8 @@ module.exports = {
     'consistent-return': 'off',
     'no-empty': 'off',
     'no-empty-pattern': 'off',
+    'no-constant-condition': 'off',
+    'default-case': 'off',
 
     'prettier/prettier': ['error'],
 
