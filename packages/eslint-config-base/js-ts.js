@@ -22,6 +22,9 @@ module.exports = {
     'no-await-in-loop': 'off',
     camelcase: 'off',
     'no-continue': 'off',
+    'consistent-return': 'off',
+    'no-empty': 'off',
+    'no-empty-pattern': 'off',
 
     'prettier/prettier': ['error'],
 
