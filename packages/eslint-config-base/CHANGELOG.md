@@ -1,5 +1,12 @@
 # @luma-dev/eslint-config-base
 
+## 0.11.0
+
+### Minor Changes
+
+- 6d0e6e2: add new feature a
+- e4fb983: disable some rules
+
 ## 0.10.0
 
 ### Minor Changes
