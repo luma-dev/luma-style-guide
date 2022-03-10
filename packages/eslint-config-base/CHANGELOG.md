@@ -1,5 +1,15 @@
 # @luma-dev/eslint-config-base
 
+## 0.13.0
+
+### Minor Changes
+
+- 016a960: reorder rule apply
+
+### Patch Changes
+
+- aa2e16e: remove unnecessary file
+
 ## 0.12.0
 
 ### Minor Changes
