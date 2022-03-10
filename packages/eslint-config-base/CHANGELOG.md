@@ -1,5 +1,11 @@
 # @luma-dev/eslint-config-base
 
+## 0.12.0
+
+### Minor Changes
+
+- 4ecddc7: turn off some rules
+
 ## 0.11.0
 
 ### Minor Changes
