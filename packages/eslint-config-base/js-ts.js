@@ -5,6 +5,7 @@ module.exports = {
   extends: ['prettier', 'plugin:eslint-comments/recommended'],
   plugins: ['import', 'eslint-comments', 'prettier'],
   rules: {
+    'no-bitwise': 'off',
     'no-underscore-dangle': 'off',
     'no-lone-blocks': 'off',
     'eslint-comments/no-unused-disable': 'error',

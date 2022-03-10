@@ -3,6 +3,7 @@ require('@rushstack/eslint-patch/modern-module-resolution');
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
   rules: {
+    'guard-for-in': 'off',
     'no-console': 'off',
     'no-restricted-syntax': 'off',
     'no-param-reassign': 'off',
@@ -10,5 +11,8 @@ module.exports = {
 
     'import/no-anonymous-default-export': 'off',
     'import/no-dynamic-require': 'off',
+    'import/no-unresolved': 'off',
+
+    '@typescript-eslint/no-var-requires': 'off',
   },
 };
