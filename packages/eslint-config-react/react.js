@@ -13,6 +13,7 @@ module.exports = {
     'react/function-component-definition': ['error', { namedComponents: 'arrow-function' }],
     'react/jsx-filename-extension': ['error', { extensions: ['.tsx'] }],
     'react/prop-types': ['off', {}],
+    'react/require-default-props': 'off',
   },
 
   plugins: ['react', 'jsx-a11y', 'import', 'prettier', '@typescript-eslint'],
