@@ -14,6 +14,7 @@ module.exports = {
     'react/jsx-filename-extension': ['error', { extensions: ['.tsx'] }],
     'react/prop-types': ['off', {}],
     'react/require-default-props': 'off',
+    'react/jsx-props-no-spreading': 'off',
   },
 
   plugins: ['react', 'jsx-a11y', 'import', 'prettier', '@typescript-eslint'],
