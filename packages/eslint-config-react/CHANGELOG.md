@@ -1,5 +1,12 @@
 # @luma-dev/eslint-config-react
 
+## 0.5.0
+
+### Minor Changes
+
+- d643cf3: Turn off react/require-default-props
+- cf5adc5: turn off react/jsx-props-no-spreading
+
 ## 0.4.4
 
 ### Patch Changes
