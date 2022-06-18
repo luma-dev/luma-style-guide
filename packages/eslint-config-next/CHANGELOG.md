@@ -1,5 +1,11 @@
 # @luma-dev/eslint-config-next
 
+## 0.4.0
+
+### Minor Changes
+
+- 847175b: fix: pages/api rules
+
 ## 0.3.0
 
 ### Minor Changes
