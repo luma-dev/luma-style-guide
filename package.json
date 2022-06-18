@@ -8,17 +8,16 @@
     "lint:eslint": "eslint \"**/*.svelte\" \"**/*.{js,cjs,mjs,ts,tsx,json}\"",
     "lint:prettier": "prettier \"**/*.{html,svelte}\" --list-different",
     "lint-quiet": "run-s lint-quiet:*",
-    "lint-quiet:eslint": "pnpm run lint:eslint -- --quiet",
+    "lint-quiet:eslint": "pnpm run lint:eslint --quiet",
     "lint-quiet:prettier": "prettier \"**/*.{html,svelte}\" --check --loglevel error",
     "lint-fix": "run-s lint-fix:*",
-    "lint-fix:eslint": "pnpm run lint:eslint -- --fix",
+    "lint-fix:eslint": "pnpm run lint:eslint --fix",
     "lint-fix:prettier": "prettier \"**/*.{html,svelte}\" --write",
     "build": "pnpm build --filter ./packages/",
     "test": "run-s test:*",
     "test:examples": "pnpm test --filter ./examples",
     "test:tsc": "tsc --noEmit",
-    "test:build": "pnpm build --filter ./examples",
-    "prepare": "husky install"
+    "test:build": "pnpm build --filter ./examples"
   },
   "devDependencies": {
     "@changesets/cli": "2.16.0",
@@ -33,7 +32,6 @@
     "commitlint": "13.1.0",
     "esbuild": "0.12.22",
     "eslint": "*",
-    "husky": "7.0.1",
     "jest": "27.0.6",
     "npm-run-all": "4.1.5",
     "prettier": "2.3.2",
@@ -46,7 +44,7 @@
   },
   "engines": {
     "npm": "forbidden, use npm",
-    "pnpm": ">=6",
+    "pnpm": ">=7",
     "yarn": "forbidden, use npm"
   }
 }
