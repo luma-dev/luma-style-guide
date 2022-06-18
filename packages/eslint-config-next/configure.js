@@ -13,12 +13,6 @@ const configureNext = (config) => {
         '@next/next/no-html-link-for-pages': ['error', path.join(__dirname, 'src/pages')],
       },
     },
-    {
-      files: ['**/pages/api/**/*.js', '**/pages/api/**/*.ts'],
-      rules: {
-        'import/no-anonymous-default-export': 'off',
-      },
-    },
   ];
 };
 

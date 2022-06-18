@@ -13,11 +13,11 @@
     "lint-fix": "run-s lint-fix:*",
     "lint-fix:eslint": "pnpm run lint:eslint --fix",
     "lint-fix:prettier": "prettier \"**/*.{html,svelte}\" --write",
-    "build": "pnpm build --filter ./packages/",
+    "build": "pnpm --filter \"./packages/**\" build",
     "test": "run-s test:*",
-    "test:examples": "pnpm test --filter ./examples",
+    "test:examples": "pnpm --filter \"./examples/**\" test",
     "test:tsc": "tsc --noEmit",
-    "test:build": "pnpm build --filter ./examples"
+    "test:build": "pnpm --filter \"./examples/**\" build"
   },
   "devDependencies": {
     "@changesets/cli": "2.16.0",
