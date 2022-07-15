@@ -32,52 +32,16 @@ pnpm add @luma-dev/eslint-config-next -D
 pnpm add @luma-dev/eslint-config-react -D
 ```
 
-[`@luma-dev/eslint-config-svelte`](https://www.npmjs.com/package/@luma-dev/eslint-config-svelte)
-
-```
-pnpm add @luma-dev/eslint-config-svelte -D
-```
-
 [`@luma-dev/eslint-config-unstyle`](https://www.npmjs.com/package/@luma-dev/eslint-config-unstyle)
 
 ```
 pnpm add @luma-dev/eslint-config-unstyle -D
 ```
 
-[`@luma-dev/eslint-plugin-svelte3`](https://www.npmjs.com/package/@luma-dev/eslint-plugin-svelte3)
-
-```
-pnpm add @luma-dev/eslint-plugin-svelte3 -D
-```
-
 [`@luma-dev/prettier-config`](https://www.npmjs.com/package/@luma-dev/prettier-config)
 
 ```
 pnpm add @luma-dev/prettier-config -D
-```
-
-[`@luma-dev/tsconfig-base`](https://www.npmjs.com/package/@luma-dev/tsconfig-base)
-
-```
-pnpm add @luma-dev/tsconfig-base -D
-```
-
-[`@luma-dev/tsconfig-next`](https://www.npmjs.com/package/@luma-dev/tsconfig-next)
-
-```
-pnpm add @luma-dev/tsconfig-next -D
-```
-
-[`@luma-dev/tsconfig-react`](https://www.npmjs.com/package/@luma-dev/tsconfig-react)
-
-```
-pnpm add @luma-dev/tsconfig-react -D
-```
-
-[`@luma-dev/tsconfig-svelte`](https://www.npmjs.com/package/@luma-dev/tsconfig-svelte)
-
-```
-pnpm add @luma-dev/tsconfig-svelte -D
 ```
 
 ## Definition
