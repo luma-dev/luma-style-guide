@@ -72,6 +72,8 @@ jobs:
       - if: ${{ github.event_name == 'push' && github.event.ref == 'refs/heads/main' }}
         name: Configure npm token
         run: pnpm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
+      - name: Git Status
+        run: git status
       - name: Publish Dry Run
         run: pnpm -r publish --dry-run
       - if: ${{ github.event_name == 'push' && github.event.ref == 'refs/heads/main' }}
