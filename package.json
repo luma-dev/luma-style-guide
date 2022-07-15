@@ -16,7 +16,6 @@
     "build": "pnpm --filter \"./packages/**\" build",
     "test": "run-s test:*",
     "test:examples": "pnpm --filter \"./examples/**\" test",
-    "test:tsc": "tsc --noEmit",
     "test:build": "pnpm --filter \"./examples/**\" build"
   },
   "devDependencies": {
