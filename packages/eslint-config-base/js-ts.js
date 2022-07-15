@@ -16,6 +16,7 @@ module.exports = {
     'no-console': 'error',
     'no-void': ['error', { allowAsStatement: true }],
     quotes: ['error', 'single', { avoidEscape: true }],
+    'no-unused-expression': ['error', 'allow-tagged-template'],
     'prefer-destructuring': 'off',
     'no-param-reassign': 'off',
     'global-require': 'off',
