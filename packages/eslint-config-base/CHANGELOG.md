@@ -1,5 +1,11 @@
 # @luma-dev/eslint-config-base
 
+## 0.13.1
+
+### Patch Changes
+
+- 3718999: allow tagged template unused expression
+
 ## 0.13.0
 
 ### Minor Changes

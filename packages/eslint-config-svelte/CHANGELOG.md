@@ -1,5 +1,12 @@
 # @luma-dev/eslint-config-svelte
 
+## 0.9.10
+
+### Patch Changes
+
+- Updated dependencies [3718999]
+  - @luma-dev/eslint-config-base@0.13.1
+
 ## 0.9.9
 
 ### Patch Changes
