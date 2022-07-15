@@ -1,5 +1,3 @@
-require('@rushstack/eslint-patch/modern-module-resolution');
-
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
   extends: ['prettier', 'plugin:eslint-comments/recommended'],
@@ -16,7 +14,7 @@ module.exports = {
     'no-console': 'error',
     'no-void': ['error', { allowAsStatement: true }],
     quotes: ['error', 'single', { avoidEscape: true }],
-    'no-unused-expression': ['error', 'allow-tagged-template'],
+    'no-unused-expressions': ['error', { allowTaggedTemplates: true }],
     'prefer-destructuring': 'off',
     'no-param-reassign': 'off',
     'global-require': 'off',
