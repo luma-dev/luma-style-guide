@@ -1,5 +1,16 @@
 {
-  "extends": "@luma-dev/tsconfig-react/tsconfig.json",
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "target": "es2017",
+    "importsNotUsedAsValues": "remove",
+    "isolatedModules": true,
+    "sourceMap": true,
+    "strict": true,
+    "esModuleInterop": false,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "preserve"
+  },
   "exclude": [
     "node_modules"
   ],
