@@ -1,2 +1,0 @@
-fail/svelte/index.html
-fail/svelte/src/root.svelte
