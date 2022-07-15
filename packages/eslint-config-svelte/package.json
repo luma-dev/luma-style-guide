@@ -1,6 +1,6 @@
 {
   "name": "@luma-dev/eslint-config-svelte",
-  "version": "0.9.10",
+  "version": "0.10.0",
   "keywords": [
     "luma"
   ],

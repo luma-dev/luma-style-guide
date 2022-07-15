@@ -1,5 +1,16 @@
 # @luma-dev/eslint-config-react
 
+## 0.6.0
+
+### Minor Changes
+
+- 9986bc2: upgrade eslint to v8 and drop support for svelte
+
+### Patch Changes
+
+- Updated dependencies [9986bc2]
+  - @luma-dev/eslint-config-base@0.14.0
+
 ## 0.5.1
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @luma-dev/eslint-config-unstyle
 
+## 0.5.0
+
+### Minor Changes
+
+- 9986bc2: upgrade eslint to v8 and drop support for svelte
+
 ## 0.4.0
 
 ### Minor Changes
