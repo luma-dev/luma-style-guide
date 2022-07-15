@@ -1,4 +1,4 @@
-const removeFromPeerDeps = ['typescript'];
+const removeFromPeerDeps = ['typescript', 'prettier'];
 const fixDeps = ['esbuild'];
 
 function readPackage(pkg) {

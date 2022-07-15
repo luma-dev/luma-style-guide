@@ -217,7 +217,7 @@ importers:
   packages/eslint-config-next:
     specifiers:
       '@babel/core': '*'
-      '@luma-dev/eslint-config-base': '>=0.4.0'
+      '@luma-dev/eslint-config-base': '>=0.14.0'
       '@rushstack/eslint-patch': '*'
       '@types/eslint': '*'
       eslint: '*'
