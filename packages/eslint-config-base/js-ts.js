@@ -27,6 +27,7 @@ module.exports = {
     'no-empty-pattern': 'off',
     'no-constant-condition': 'off',
     'default-case': 'off',
+    'array-callback-return': 'off',
 
     'prettier/prettier': ['error'],
 
